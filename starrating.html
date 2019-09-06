@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Star rating</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .rating-wrapper {
+            text-align: center;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        fieldset,
+        label {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: 10px;
+        }
+
+        .rating {
+            border: none;
+            float: left;
+        }
+
+        .rating-wrapper {
+            position: relative;
+            width: 170px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .rating>input {
+            display: none;
+        }
+
+        .rating>label:before {
+            content: "\f005";
+            font-family: FontAwesome;
+            font-size: 25px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .rating>.half:before {
+            content: "\f089";
+            position: absolute;
+        }
+
+        .rating>label {
+            float: right;
+            color: #ddd;
+        }
+
+        .rating>input:checked~label,
+        .rating:not(:checked)>label:hover,
+        .rating:not(:checked)>label:hover~label {
+            color: #FFE700;
+        }
+
+        .rating>input:checked+label:hover,
+        .rating>input:checked~label:hover,
+        .rating>label:hover~input:checked~label,
+        .rating>input:checked~label:hover~label {
+            color: #FFD700;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> CSS star rating </h1>
+    <div class="rating-wrapper">
+
+        <fieldset class="rating">
+            <input type="radio" id="star5" name="rating" value="5">
+            <label class="full" for="star5" title="5 stars"></label>
+
+            <input type="radio" id="star4.5" name="rating" value="4.5" checked>
+            <label class="half" for="star4.5" title="4.5 stars"></label>
+
+            <input type="radio" id="star4" name="rating" value="4">
+            <label class="full" for="star4" title="4 stars"></label>
+
+            <input type="radio" id="star3.5" name="rating" value="3.5">
+            <label class="half" for="star3.5" title="3.5 stars"></label>
+
+            <input type="radio" id="star3" name="rating" value="3">
+            <label class="full" for="star3" title="3 stars"></label>
+
+            <input type="radio" id="star2.5" name="rating" value="2.5">
+            <label class="half" for="star2.5" title="2.5 stars"></label>
+
+            <input type="radio" id="star2" name="rating" value="2">
+            <label class="full" for="star2" title="2 stars"></label>
+
+            <input type="radio" id="star1.5" name="rating" value="1.5">
+            <label class="half" for="star1.5" title="1.5 stars"></label>
+
+            <input type="radio" id="star1" name="rating" value="1">
+            <label class="full" for="star1" title="1 stars"></label>
+
+            <input type="radio" id="star0.5" name="rating" value="0.5">
+            <label class="half" for="star0.5" title="0.5 stars"></label>
+        </fieldset>
+    </div>
+    <script src="https://use.fontawesome.com/8d26d14290.js"></script>
+</body>
+
+</html>
